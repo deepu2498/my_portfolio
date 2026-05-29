@@ -160,23 +160,13 @@
 </section>
 
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("TARr7HR2S6WCG6ZCe"); // Replace with your actual user ID from EmailJS
-  })();
-
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    emailjs.sendForm('service_ud44y4c', 'template_fhk8ymr', this)
-      .then(function() {
-        alert("Message sent successfully!");
-      }, function(error) {
-        alert("Failed to send message. Please try again.\n" + JSON.stringify(error));
-      });
-  });
-</script>
+<form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="96789ffc-9551-4c1a-9bcb-a81e00990403">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
 
 
 
